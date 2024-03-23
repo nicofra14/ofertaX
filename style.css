@@ -17,8 +17,7 @@ img {
     width: 100%;
 }
 
-section {
-    
+section {    
     position: relative;
     width: 100%;
     min-height: 80vh;
@@ -80,48 +79,43 @@ header {
 }
 
 
+/* Estilos para la sección de inicio */
 .inicio {
-    margin: 0;
-    padding: 0;
-    margin-top: 90px;   
+    text-align: center;
+    margin-top: 140px;
+    padding: 50px 50PX;
 }
 
- .swiper2 {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 1600px;
-  }
-
-  .swiper2 img {
-    height: 265px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .swiper2 .swiper-button-prev,
-  .swiper2 .swiper-button-next {
-    --swiper-navigation-size: 20px;
-    background-color: #fff;
-    height: 70px;
-    width: 50px;
-    margin-top: -75px;
-    opacity: 0;
-} 
-
-.swiper2 .swiper-button-prev {
-    border-radius: 65px;
-    left: -10px;
+/* Estilos para el título */
+.inicio h1 {
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 0.8;
+    margin-bottom: 10px; /* Añade un margen inferior al título */
 }
 
-.swiper2 .swiper-button-next {
-    border-radius: 65px;
-    right: -10px;
+/* Estilos para el párrafo de enunciado */
+.enunciado {
+    font-size: 1.4em;
+    font-weight: 400;    
+    margin-bottom: 20px; /* Añade un margen inferior al párrafo de enunciado */
 }
 
-.swiper2:hover .swiper-button-prev,
-.swiper2:hover .swiper-button-next {
-    opacity: 1;
+/* Estilos para el párrafo de explicación */
+.explicacion {
+    font-size: 1em;
+    margin-bottom: 30px; /* Añade un margen inferior más grande al párrafo de explicación */
+}
+
+
+
+
+/* Media query para ajustar el tamaño del título en pantallas más grandes */
+@media screen and (min-width: 768px) {
+    .inicio h1 {
+        font-size: 7.5em;
+        padding: 10px 10px;
+    }
 }
 
 .home {
@@ -183,57 +177,156 @@ header {
     transition: 0.2s;
     width: 100%;
   }
-/*
-  .swiper-hero2 {
-    width: 100%;
-    height: 355px;
-    max-width: 1900px;
+
+   /* Productos */
+
+
+.product {
+    position: relative; /* Para posicionar elementos hijos relativos a este contenedor */
+}
+
+/* Estilos para la pestaña de descuento */
+.discount-tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border-top-right-radius: 10px;
+    font-size: 20px;
+}
+
+/* Estilos adicionales para el contenedor del producto */
+.product {
+    position: relative; /* Asegura que la pestaña esté posicionada correctamente */
+}
+
+
+.price {
+    display: none; /* Ocultar el precio por defecto */
+    position: absolute; /* Posicionar el precio encima del botón de compra */
+    top: calc(100% + 5px); /* Colocar el precio justo debajo del botón de compra */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    background-color: rgba(179, 23, 23, 0.8); /* Fondo semi-transparente */
+    padding: 5px 10px; /* Espacio alrededor del precio */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Alinear el texto al centro */
+    width: fit-content; /* Ajustar el ancho al contenido */
+    z-index: 1000; /* Colocar el precio encima del botón */
+}
+
+.product:hover .price {
+    display: block; /* Mostrar el precio cuando se hace hover en el producto */
+}
+
+.buy-btn {
+    display: none; /* Ocultar el botón de compra por defecto */
+    position: absolute; /* Posicionar el botón encima de la imagen */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrar tanto vertical como horizontalmente */
+    padding: 10px 20px; /* Espacio alrededor del botón */
+    background-color: #8b52ff; /* Fondo semi-transparente */
+    color: black; /* Color del texto */
+    border: 2px solid black;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none;
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s;     
+}
+
+.product:hover .buy-btn {
+    display: block; /* Mostrar el botón de compra cuando se hace hover en el producto */
+}
+
+.product img {
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad de la imagen */
+}
+
+.product:hover img {
+    opacity: 0.7; /* Reducir la opacidad de la imagen cuando se hace hover en el producto */
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 40px auto; /* Centrar verticalmente */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9fafb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+  }
+  
+  .contact-form h2 {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group textarea{
+    width: 100% ; /* Ancho igual al 100% menos el relleno en ambos lados */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Incluir el relleno en el ancho total */
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus,
+  .form-group input[type="password"]:focus,
+  .form-group textarea:focus {
+    border-color: blue;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid black;
+    background-color: #8b52ff;; /* Cambiar el color de fondo del botón */
+    color: #000000; /* Cambiar el color del texto del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
 
-   */ 
-    
-
-/* .home-text {
-    flex: 1 1 17rem;
-}
-
-.home-img {
-    flex: 1 1 17rem;
-}
-
-.home-text span {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: black;
-}
-
-.home-text h1 {
-    font-size: 3.2rem;
-    color: var(--main-color);
-    font-weight: bolder;
-}
-
-.home-text h2 {
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: black;
-    text-transform: capitalize;
-    margin: 0.5rem 0 1.4rem;
-} */
-
-
-.btn {
-    padding: 7px 16px;
-    border: 2px solid var(--second-color);
-    border-radius: 40px;
-    color: var(--second-color);
-    font-weight: 600;
-}
-
 .btn:hover {
-    color: #fff;
-    background: var(--main-color);
+    background-color: #fff; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+} 
+  
+
+label {
+    display: block;
+    margin-bottom: 5px;
 }
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    max-width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+
 
 .services {
     display: flex;
@@ -275,16 +368,8 @@ header {
     margin: 20px; /* Espaciado entre los elementos, ajusta según sea necesario */
 }
 
-.hearts {
-    margin: 1rem 0 0.1rem;
-}
-
-.servicios-container .box .hearts .bx {
-    color: yellow;
-}
-
 .servicios-container .box .box-img img{
-    margin-top: 70px;
+    margin-top: 5px;
     width: 100%;
     height: 100%;
     object-fit:cover
@@ -298,27 +383,6 @@ header {
     object-fit: contain;
 }
 
-
-.box .btn-1 {
-    margin-top: 10px; /* Agrega espacio sobre el botón */
-    display: inline-block; /* Hace que el botón respete los márgenes */
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 7px 16px;
-    border: 2px solid var(--main-color);
-    border-radius: 40px;
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.btn:hover {
-    background-color: var(--main-color);
-}
-
-.btn-1:hover {
-    background-color: var(--main-color);
-    color:#fff;
-}
 
 .about {
     display: flex;
@@ -388,6 +452,39 @@ header {
     text-align: center;
 }
 
+.whatsapp-button {
+    position: fixed;
+    bottom: 50px; /* Ajusta la distancia desde la parte inferior */
+    right: 50px; /* Ajusta la distancia desde el borde derecho */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #10B981;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .whatsapp-icon img {
+    width: 60%;
+    height: auto;
+  }
+  
+  .whatsapp-button:hover .whatsapp-icon {
+    background-color: #25d366;
+    border-color: #059669;
+  }
+  
+  .whatsapp-button:focus .whatsapp-icon {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.5);
+  }
+  
 
 @media (max-width: 1150px) {
     header {
