@@ -106,10 +106,6 @@ header {
     font-size: 1em;
     margin-bottom: 30px; /* Añade un margen inferior más grande al párrafo de explicación */
 }
-
-
-
-
 /* Media query para ajustar el tamaño del título en pantallas más grandes */
 @media screen and (min-width: 768px) {
     .inicio h1 {
@@ -249,6 +245,36 @@ header {
     opacity: 0.7; /* Reducir la opacidad de la imagen cuando se hace hover en el producto */
 }
 
+/* Estilo para los productos */
+/* Estilo para los productos */
+.product1 {
+    text-align: center; /* Centrar el contenido */
+    margin-bottom: 20px; /* Espacio entre productos */
+  }
+  
+  /* Estilo para las imágenes de los productos */
+  .product1 img {
+    border-radius: 50%; /* Hacer la imagen redonda */
+    width: 200px; /* Tamaño predeterminado de la imagen */
+    height: 200px; /* Tamaño predeterminado de la imagen */
+  }
+  
+  /* Estilo para el texto dentro de los productos */
+  .product1 h3 {
+    margin-top: 10px; /* Espacio superior */
+    font-size: 18px; /* Tamaño de fuente */
+  }
+   
+  /* Estilos específicos para dispositivos pequeños */
+  @media screen and (max-width: 768px) {
+    .product1 img {
+      width: 150px; /* Reducir el ancho de la imagen en dispositivos pequeños */
+      height: 150px; /* Reducir la altura de la imagen en dispositivos pequeños */
+    }
+  }
+  
+ /* Formulario */
+
 .contact-form {
     max-width: 400px;
     margin: 40px auto; /* Centrar verticalmente */
@@ -306,6 +332,16 @@ header {
     background-color: #fff; /* Cambia el color de fondo al pasar el cursor sobre el botón */
 } 
   
+.video-player {
+    background-color: #ccc;
+    margin-top: 20px; /* Margen superior */
+    margin-left: auto; /* Margen izquierdo automático */
+    margin-right: auto; /* Margen derecho automático */
+    width: 100%; /* Ancho del video al 100% */
+    min-width: 0; /* Ancho mínimo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
 
 label {
     display: block;
@@ -387,7 +423,7 @@ textarea {
 .about {
     display: flex;
     flex-wrap: wrap;
-    background: #e0e0e0;
+    background: #f8f8f8;
     gap: 1.5rem;
 }
 

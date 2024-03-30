@@ -42,6 +42,64 @@
 
     <!-- ofertax -->
 
+    <section class="home" id="">
+      <div class="swiper swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="product1">
+              <a href="//api.whatsapp.com/send/?phone=17166571647&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank">
+               <img src="/img/echo101.PNG" alt="">
+               <h3>Dispositivos amazon</h3>
+              </a>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product1">
+              <a href="//api.whatsapp.com/send/?phone=17166571647&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank">
+              <img src="/img/pro3.0.PNG" alt="">
+              <h3>PC`s y accesorios</h3>
+              </a>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product1">
+                <a href="//api.whatsapp.com/send/?phone=17166571647&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank">
+                <img src="/img/pro3.0.PNG" alt="">
+                <h3>PC`s y accesorios</h3>
+                </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product1">
+              <a href="//api.whatsapp.com/send/?phone=17166571647&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank">
+              <img src="/img/pro3.0.PNG" alt="">
+              <h3>PC`s y accesorios</h3>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product1">
+                <a href="//api.whatsapp.com/send/?phone=17166571647&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank">
+                <img src="/img/pro3.0.PNG" alt="">
+                <h3>PC`s y accesorios</h3>
+                </a>
+            </div>
+          </div> 
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div>-->
+      </div> 
+    </section>
+
+    <!-- Imagenes ofertax -->
+
     <section class="home" id="servicios">
       <div class="swiper swiper-hero">
         <!-- Additional required wrapper -->
@@ -174,12 +232,17 @@
 
     <section class="about" id="nosotros">
         <div class="about-img">
-            <img src="/img/casalimpia (1).png" alt="organizacion">
+          <video class="video-player" autoplay playsinline loop muted>
+            <source src="img/compra-ofertax.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div class="about-text">
-            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi optio ut aperiam unde minus dolorum quo doloribus, deleniti architecto deserunt nesciunt eum, eos praesentium autem aspernatur. Reprehenderit omnis blanditiis expedita.    </h2>
-             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quibusdam assumenda corrupti nulla quas placeat doloribus similique ullam laborum aut distinctio odio necessitatibus iure et ea, fuga quasi unde non?</p>
-             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum quia officia commodi necessitatibus deserunt! Ipsa deleniti error provident quisquam nemo. Id, eveniet quo? Natus enim ut facere eaque, modi laudantium?</p>
+            <h2>En Ofertax, nuestro principal objetivo es ofrecerte acceso a productos con descuento directamente desde los Estados Unidos hasta Colombia. Nos esforzamos por encontrar las mejores ofertas y aplicar beneficios de entrega rápida y sin costos adicionales.
+
+              Somos una empresa comprometida con brindarte la mejor experiencia de compra, asegurándonos de que puedas aprovechar al máximo cada oportunidad de ahorro. Nos especializamos en traer productos de calidad a precios asequibles, garantizando que tengas acceso a una amplia gama de opciones con descuento</h2>
+             <p>En Ofertax, no solo buscamos proporcionarte productos a precios atractivos, sino también ofrecerte un servicio confiable y eficiente. Trabajamos arduamente para asegurarnos de que tus compras lleguen a tiempo y en perfectas condiciones, sin preocupaciones adicionales por costos de envío o tiempos de espera prolongados.</p>
+             <p>Con Ofertax, puedes estar seguro de que estás obteniendo lo mejor en términos de calidad, precio y conveniencia. ¡Déjanos ayudarte a aprovechar al máximo tus compras en línea y descubre una nueva forma de disfrutar de tus productos favoritos con descuento!</p>
 
         </div>
     </section>
@@ -190,7 +253,7 @@
       
       <div class="contact-form">
           <h2>Suscribete para recibir todas las ofertax</h2>
-          <form>
+          <form name="contact" netlify>
               <div class="form-group">
                   <input type="text" id="name" name="name" placeholder="Tu nombre">
               </div>
@@ -212,14 +275,15 @@
         <div class="social">
           <a href="#"><i class='bx bxl-facebook'></i></a>
           <a href="#"><i class='bx bxl-instagram'></i></a>
-          <a href="#"><i class='bx bxl-tiktok'></i></a>
+          <!-- Pendiente de activacion  <a href="#"><i class='bx bxl-tiktok'></i></a> -->
+          <a href="#"><i class='bx bxl-telegram'></i></a>
         </div>
         <div class="links">
             <a href="">Politicas</a>
             <a href="">Terminos</a>
-            <a href="">Contacto</a>
+            <a id="contacto">Contacto</a>
         </div>
-        <p>&#169; <a href="">ofertax.co</a></p>
+        <p>&#169; <a href="#">ofertax.co</a></p>
     </section>
     
 </body>
@@ -233,7 +297,7 @@
     slidesPerView: 'auto',
     direction: 'horizontal',
     slidesPerView: "3",
-    spaceBetween: 0, 
+    spaceBetween: 5, 
     centeredSlides: true, 
     loop: true,
     autoplay: false,
