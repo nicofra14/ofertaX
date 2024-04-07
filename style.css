@@ -30,7 +30,7 @@ section {
 
 *::selection {
     color: #fff;
-    background: var(--main-color);
+    background: #000000;
 }
 
 header {
@@ -61,6 +61,8 @@ header {
 
 .navbar {
     display: flex;    
+    overflow-y: auto;
+    max-height: 700px;
 }
 
 .navbar a {
@@ -112,55 +114,78 @@ header {
         font-size: 7.5em;
         padding: 10px 10px;
     }
+    .navbar {
+        overflow-y: hidden; /* Eliminar el desplazamiento vertical */
+    }
 }
 
 .home {
-    margin-top: -20px;
-    z-index: 800;
+    height: 10px;
+    width: 100%;
+    z-index: 0;
 }
-
-  .swiper.hero {        
-    position: relative;
-    transition: transform 0.3s ease; 
-    
-}
-
-  .swiper-hero img{
-    height: 444px;
-    width: 250px;
-    object-fit: scale-down;
-    border-radius: 35px;
-   }
-
-.swiper-hero .swiper-button-prev,
-.swiper-hero .swiper-button-next {
+  
+/* Estilos para los botones de navegación */
+.swiper-hero-1 .swiper-button-prev,
+.swiper-hero-1 .swiper-button-next {
     --swiper-navigation-size: 25px;
     background-color: white;
     color: #8b52ff;
-    height: 50px;
-    width: 50px;
-    border-radius: 9999px;
-    margin-top: -35px;
+    height: 40px; /* Reducir la altura de los botones */
+    width: 40px; /* Reducir el ancho de los botones */
+    border-radius: 50%; /* Hacer los botones circulares */
+    margin-top: -20px; /* Ajustar la posición vertical */
     opacity: 0;
     transition: opacity 0.3s;
 }
 
-.swiper-hero:hover .swiper-button-prev,
-.swiper-hero:hover .swiper-button-next {
+/* Mostrar los botones de navegación al hacer hover */
+.swiper-hero-1:hover .swiper-button-prev,
+.swiper-hero-1:hover .swiper-button-next {
   opacity: 1;
 }
 
-.swiper-hero .swiper-pagination {
-  --swiper-pagination-color: #8b52ff; 
-  --swiper-pagination-bullet-size: 4px;
-} 
+/* Estilos para la sección del carrusel */
+.swiper-hero-1 {
+    margin-top: 50px; /* Ajustar el margen superior según sea necesario */
+}
 
-.swiper .swiper-wrapper .swiper-slide1 {
-    width: 250px;
-    border-radius: 45px;
-} 
+/* Estilos para las imágenes dentro del carrusel */
+/* Estilos para las imágenes dentro del carrusel */
+.swiper-hero-1 img {
+    width: 100%; /* Las imágenes ocuparán el ancho completo del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    border-radius: 50%; /* Hacer las imágenes circulares */
+}
 
-   .swiper-hero img {
+/* Aumentar el tamaño de las imágenes en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .swiper-hero-1 img {
+        width: 200px; /* Ajustar el ancho de las imágenes en dispositivos móviles */
+        height: 200px; /* Ajustar la altura de las imágenes en dispositivos móviles */
+    }
+}
+
+/* Aumentar el tamaño del contenedor del carrusel en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .swiper-hero-1 {
+        margin-top: -70px; /* Ajustar el margen superior en dispositivos móviles */
+        width: 100%; /* Ajustar el ancho del contenedor del carrusel en dispositivos móviles */
+    }
+}
+
+
+/* Aumentar el espacio entre las imágenes y los bordes del contenedor */
+.swiper-hero-1 .swiper-wrapper {
+    padding: 20px 20px; /* Ajustar el espacio horizontal */
+}
+
+.home1 {
+    margin-top: -150px;
+    z-index: 800;
+}
+
+  .swiper-hero-2 img {
     margin: 0;
     height: 355px;
     width: 100%;
@@ -175,8 +200,6 @@ header {
   }
 
    /* Productos */
-
-
 .product {
     position: relative; /* Para posicionar elementos hijos relativos a este contenedor */
 }
@@ -245,33 +268,72 @@ header {
     opacity: 0.7; /* Reducir la opacidad de la imagen cuando se hace hover en el producto */
 }
 
-/* Estilo para los productos */
-/* Estilo para los productos */
-.product1 {
-    text-align: center; /* Centrar el contenido */
-    margin-bottom: 20px; /* Espacio entre productos */
+/* Estilos para cada producto */
+.product1 img {
+    width: 200px; /* Tamaño específico para la imagen */
+    height: 200px; /* Tamaño específico para la imagen */
+    object-fit: cover; /* La imagen cubrirá todo el contenedor manteniendo la proporción */
+    border-radius: 50%; /* Hace la imagen circular */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
   }
   
-  /* Estilo para las imágenes de los productos */
-  .product1 img {
-    border-radius: 50%; /* Hacer la imagen redonda */
-    width: 200px; /* Tamaño predeterminado de la imagen */
-    height: 200px; /* Tamaño predeterminado de la imagen */
+  /* Efecto hover para las imágenes */
+  .product1 img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al hacer hover */
   }
   
-  /* Estilo para el texto dentro de los productos */
-  .product1 h3 {
-    margin-top: 10px; /* Espacio superior */
-    font-size: 18px; /* Tamaño de fuente */
-  }
-   
   /* Estilos específicos para dispositivos pequeños */
   @media screen and (max-width: 768px) {
     .product1 img {
-      width: 150px; /* Reducir el ancho de la imagen en dispositivos pequeños */
-      height: 150px; /* Reducir la altura de la imagen en dispositivos pequeños */
+      width: 100px; /* Reducir el ancho de la imagen en dispositivos pequeños */
+      height: 100px; /* Reducir la altura de la imagen en dispositivos pequeños */
     }
   }
+
+   /* testimonios */
+   .testimonial-section {
+    text-align: center;
+  }
+  
+  /* Contenedor principal para los testimonios */
+.testimonials-container {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los testimonios se envuelvan a la siguiente línea */
+    padding: 20px; /* Ajusta el espacio alrededor de los testimonios */
+  }
+  
+  /* Estilos para cada testimonio */
+  .testimonial {
+    display: inline-block; /* Permite que los testimonios se muestren en línea */
+    vertical-align: top; /* Alinea los testimonios en la parte superior */
+    margin-right: 20px; /* Espacio entre testimonios */
+    max-width: 300px; /* Ancho máximo de cada testimonio */
+  }
+  
+  .testimonial img {
+    width: 100px; /* Tamaño de la imagen del cliente */
+    height: 100px;
+    border-radius: 50%; /* Para que la imagen sea circular */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .testimonial p {
+    margin-bottom: 5px; /* Espacio entre el texto y la cita */
+  }
+  
+  .testimonial cite {
+    font-style: normal; /* Asegura que la cita esté en estilo normal */
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Cambiar el ancho máximo de los testimonios para dispositivos móviles */
+    .testimonial {
+      max-width: 100%; /* Ancho máximo del testimonio para ocupar todo el ancho de la pantalla */
+      margin-right: 0; /* Eliminar el margen derecho en dispositivos móviles */
+      margin-bottom: 20px; /* Agregar margen inferior entre testimonios en dispositivos móviles */
+    }
+  }
+  
   
  /* Formulario */
 
@@ -383,7 +445,7 @@ textarea {
     display: block;
     font-size: 18px;
     margin-bottom: 10px;
-    color: #7a9175;
+    color: #a1a3a1;
 }
 
 .heading h1 {
@@ -521,6 +583,81 @@ textarea {
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.5);
   }
   
+/* Estilos para el modal */
+/* Estilos para el modal */
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 50;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Ancho máximo del modal */
+    border-radius: 10px;
+}
+
+/* Estilos para el botón de aceptar */
+#acceptBtn {
+    background-color: #8b52ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#acceptBtn:hover {
+    background-color: #6c33cc;
+}
+
+/* Estilos para el botón de cerrar (la "X") */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Media query para dispositivos móviles  MODAL */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 15% auto; /* Ajustar el margen para dispositivos móviles */
+        padding: 20px;
+        width: 90%;
+    }
+
+    #acceptBtn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+}
+
+/* MODAL */
 
 @media (max-width: 1150px) {
     header {
