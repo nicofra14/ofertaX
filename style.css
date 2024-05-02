@@ -225,11 +225,11 @@ header {
 .price {
     display: none; /* Ocultar el precio por defecto */
     position: absolute; /* Posicionar el precio encima del botón de compra */
-    top: calc(100% + 5px); /* Colocar el precio justo debajo del botón de compra */
+    top: 250px; /* Colocar el precio justo debajo del botón de compra */
     left: 50%; /* Centrar horizontalmente */
     transform: translateX(-50%); /* Centrar horizontalmente */
-    background-color: rgba(179, 23, 23, 0.8); /* Fondo semi-transparente */
-    padding: 5px 10px; /* Espacio alrededor del precio */
+    background-color: rgba(243, 18, 18, 0.8); /* Fondo semi-transparente */
+    padding: 10px 15px; /* Espacio alrededor del precio */
     border-radius: 5px; /* Bordes redondeados */
     text-align: center; /* Alinear el texto al centro */
     width: fit-content; /* Ajustar el ancho al contenido */
